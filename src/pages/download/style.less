@@ -1,0 +1,185 @@
+.download {
+  &__app-info,
+  &__version-history,
+  &__app-intro {
+    width: 50%;
+    margin: 0 auto;
+  }
+  &__banner {
+    height: 100px;
+    background: url('@/assets/download-header.svg') no-repeat;
+    background-size: cover;
+  }
+  &__details {
+    width: 80%;
+    margin: 0 auto;
+    &__head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -50px;
+      &__text {
+        margin: 5px;
+        &--name {
+          color: #595959;
+          font-weight: 700;
+          font-size: 20px;
+        }
+        &--platform {
+          color: #000000;
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+    &__qr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__text {
+        margin: 1em 0;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      &__image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .ant-space {
+        .ant-space-item {
+          min-width: 190px;
+        }
+      }
+    }
+  }
+}
+
+.dots-class {
+  li {
+    button {
+      background: #000 !important;
+    }
+    &.slick-active button {
+      background: #000 !important;
+    }
+  }
+}
+
+.ads-image-section {
+  max-width: 728px;
+  height: 98px;
+  min-height: 98px;
+  max-height: 98px;
+  margin: 35px auto 0 auto;
+  overflow: hidden;
+  .carousel {
+    position: relative;
+    .flickity-page-dots {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      // margin: 10px 0;
+      transform: translate(-65%, 0%);
+
+      .dot {
+        width: 38px;
+        height: 6px;
+        background: rgba(217, 217, 217, 0.5);
+      }
+
+      .dot.is-selected {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.ads-video-section {
+  position: relative;
+  width: 50%;
+  margin: 30px auto;
+
+  .video-url {
+    position: absolute;
+    bottom: 12%;
+    left: 5%;
+    color: #fff;
+    transform: translate(-5%, 12%);
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .download {
+    &__app-info,
+    &__version-history,
+    &__app-intro {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media all and (max-width: 650px) {
+  .download {
+    &__app-info,
+    &__version-history,
+    &__app-intro {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .ads-video-section {
+    width: auto;
+  }
+}
+
+@media all and (max-width: 540px) {
+  .download {
+    .download__details__qr {
+      .ant-space {
+        flex-wrap: wrap;
+        gap: 20px !important;
+        justify-content: center;
+        .ant-space-item-split {
+          display: none;
+        }
+        .ant-space-item {
+          min-width: 190px;
+        }
+      }
+    }
+    .download__app-info {
+      .ant-space {
+        gap: 0px !important;
+      }
+    }
+    .download__app-intro {
+      .ant-image {
+        .ant-image-img,
+        .ant-image-mask {
+          margin: 20px 0;
+        }
+      }
+    }
+    .ads-video-section {
+      width: auto;
+    }
+    .ads-image-section {
+      height: auto;
+      min-height: auto;
+    }
+    .flickity-page-dots {
+      display: none !important;
+    }
+  }
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+}

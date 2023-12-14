@@ -1,0 +1,48 @@
+.uploadAppSection {
+  width: 100%;
+  text-align: center;
+
+  .uploadAppList {
+    height: 135px;
+    overflow: scroll;
+  }
+
+  .uploadAppItem {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+
+    .disabled {
+      color: #a6aaae;
+      opacity: 0.6;
+    }
+
+    .selected {
+      color: #1890ff;
+    }
+  }
+
+  // .uploadAppItem:has(.selected) {
+  //   background-color: rgba(0, 0, 0, 0.04);
+  //   border-radius: 6px;
+
+  // }
+
+  button {
+    width: 100%;
+  }
+}
+
+.MenuHeaderContentModal {
+  :global {
+    .ant-modal-body .ant-pro-steps-form-container .ant-pro-steps-form-step {
+      margin-block-start: 0px;
+    }
+
+    .ant-pro-steps-form-container {
+      width: auto;
+    }
+  }
+}

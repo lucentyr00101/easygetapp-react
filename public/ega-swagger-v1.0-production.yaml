@@ -1,0 +1,81 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: Attributes Settings
+  description: This provides EGA Mobile attribute settings.
+servers:
+  - url: https://api.easygetapp.com
+paths:
+  "/api/attribute/public/detail":
+    post:
+      tags:
+        - attribute-controller
+      summary: Get Mobile App attribute
+      description: Get Mobile App attribute
+      operationId: getPublicDetail
+      parameters:
+        - name: ega-api-key
+          in: header
+          required: true
+          description: This is App ID to be used as key in request header
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AttributePublicDetailParam"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AttributePublicResponse"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponseData"
+        "403":
+          description: Forbidden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponseData"
+components:
+  schemas:
+    ErrorResponseData:
+      type: object
+      properties:
+        success:
+          type: boolean
+          default: false
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+    AttributePublicDetailParam:
+      type: object
+      properties:
+        operatingSystem:
+          type: string
+        versionNumber:
+          type: string
+    AttributePublicResponse:
+      type: object
+      properties:
+        operatingSystem:
+          type: string
+        attributeSettings:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              value:
+                type: string

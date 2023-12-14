@@ -1,0 +1,16 @@
+export default {
+  'dropdown.select.all': 'All',
+  'dropdown.select.enable': 'Enable',
+  'dropdown.select.disable': 'Disable',
+  'dropdown.select.admin': 'Admin',
+  'dropdown.select.member': 'Member',
+  'dropdown.select.publish': 'Publish',
+  'dropdown.select.published': 'Published',
+  'dropdown.select.archive': 'Archive',
+  'dropdown.select.archived': 'Archived',
+  'dropdown.select.expired': 'Expired',
+  'dropdown.select.invalid': 'Invalid',
+  'dropdown.select.draft': 'Draft',
+  'dropdown.select.live': 'Live',
+  'dropdown.select.all.version': 'All Version',
+};

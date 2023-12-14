@@ -1,0 +1,57 @@
+.login {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background: url('@/assets/login-bg-top-right.svg') right top no-repeat,
+    url('@/assets/login-bg-bottom-left.svg') bottom left no-repeat;
+  &__text {
+    margin: 0;
+    text-align: center;
+    &--head {
+      color: #00b1ff;
+      font-weight: 700;
+      font-size: 40px;
+    }
+    &--sub {
+      margin-bottom: 50px;
+      font-size: 14px;
+    }
+  }
+  &__content {
+    height: 100%;
+    padding: 42px;
+  }
+  &__logo {
+    width: 196px;
+  }
+  &__image {
+    flex: 1 1 700px;
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 700px;
+    }
+  }
+  &__form {
+    height: 100%;
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      height: calc(100% - 84px);
+      :global {
+        .form-wrapper {
+          flex: 1 1 500px;
+          height: auto;
+          .ant-form {
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
